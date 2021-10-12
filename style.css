@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap');
+
+body{
+    margin: 0;
+    background: #E5E5E5;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+
+}
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto;
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 500px;
+    grid-column-gap: 20px;
+    justify-content: center;
+}
+
+.image_form{
+    width:100%;
+    min-width: 500px;
+    height: 100%;
+}
+
+.container__form{
+    display: grid;
+    grid-template-columns: 0.8fr;
+    justify-content: center;
+    grid-row-gap: 15px;
+    padding: 30px 0;
+}
+
+.button{
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 20px 13px 24px;
+    font-family: inter, sans-serif;
+    color: #ffffff;
+    cursor: pointer;
+}
+.button__label{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button--red{
+    background: #D7503F;
+}
+
+.button--black{
+    background: #000000;
+}
+
+.lineBrake{
+    display: grid;
+    grid-template-columns: 1fr 10px 1fr;
+    column-gap: 5px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.lineBrake__line{
+    border: 0.2px solid rgba(17, 17, 19, 0.2);
+}
+
+.form{
+    /*max-width: 300px;*/
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 15px;
+}
+
+.form__radio{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.checkbox--container{
+    display: block;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.input{
+    border: 3px solid rgba(17, 17, 19, 0.2);
+    border-radius: 4px;
+    font-family: inter, sans-serif;
+    padding: 13px 16px;
+}
+
+/* Hide the browser's default checkbox */
+.input--radio, .input--checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+
+}
+.checkmark--radio{
+    border-radius: 50%;
+}
+
+.checkmark--checkbox{
+    border: 1px solid #D4D4D4;
+    border-radius: 4px;
+}
+
+.checkbox--container:hover > .checkmark {
+    background-color: #F9DADA;
+;
+}
+
+.checkbox--container > .input:checked ~ .checkmark {
+    background-color: #EB5757;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox--container > .input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox--container > .checkmark--radio:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.checkbox--container > .checkmark--checkbox:after{
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.form__checkbox{
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.checkbox--label{
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.form__select{
+
+    position:relative;
+}
+
+.select-arrow{
+    cotent: " ";
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid #111;
+    border-bottom: 2px solid #111;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+    z-index: 0;
+    transform: rotate(45deg);
+}
+
+.input--select{
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background-color: transparent;
+
+}
+
+.form__footer{
+text-align: center;
+
+}
+
+.footer__link{
+    text-decoration: none;
+    color: rgba(17, 17, 19, 0.6);
+}
+.footer_label{
+    text-decoration: underline;
+}
